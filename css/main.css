@@ -148,6 +148,7 @@ h2 {
     padding-top: 5%;
     width: fit-content;
     height: fit-content;
+    text-transform: uppercase;
 }
 .home_screen h2{
     font-size:100px;
@@ -155,7 +156,7 @@ h2 {
     text-align: center; 
     margin-left: auto;
     margin-right: auto;   
-    text-decoration: underline       ;
+    text-decoration: underline;
 }
 .home_screen * {
     color: #fff;
@@ -172,19 +173,26 @@ h2 {
     height: 100vh;
     width: 100vw;
 }
+.comp h2, .exp h2{
+    font-size: 50px;
+    margin-bottom: 5%;
+    padding-left: 20vw;
+
+}
 .comp ul{
-    margin: 10% 10%;
+    margin: 0 10% 5%;
     display: grid;
     grid-template-columns: repeat(6,1fr);
     gap: 1rem;
     
 }
 .comp .qualities, .comp .lang{
-    margin: 5% 10%;
+    margin: 2% 10%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 1rem;
     text-align: center;
+    font-size: 25px;
     
 }
 .comp .lang{
@@ -203,10 +211,15 @@ h2 {
    height: 100vh;
    width: 100vw;
    color: #fff;
+   font-size: 15px;
 }
 
 .exp h2 {
     color :#222;
+}
+.exp .split li h3{
+    text-transform:uppercase;
+    letter-spacing: 2px;
 }
 
 .exp .split{

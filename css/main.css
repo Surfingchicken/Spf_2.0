@@ -4,6 +4,7 @@
 html{
     font-size: 62.5%; 
     scroll-behavior: smooth;
+    background-color: #222;
 }
 body{
   font: 1.6rem sans-serif;
@@ -12,6 +13,7 @@ body{
   overflow-x: hidden;
   font-weight: 600;
   transition: all .8s ease-in-out;
+  overflow-x: hidden;
 }
 h2{
     font-weight: 900;
@@ -54,7 +56,7 @@ figcaption{
 }
 /*thème*/
 
-body[data-nav="false"] > main > button{
+body[data-nav="false"] > button{
     height: 5rem;
     width: 5rem;
     display: block;
@@ -67,27 +69,33 @@ body[data-nav="false"] > main > button{
     cursor: pointer;
     transition: all ease-in-out 500ms;
 }
-body:not([data-nav="false"]) > main > button{
+body:not([data-nav="false"]) > button{
     background-color: #fff ;
     height: 5rem;
     width: 5rem;
     display: block;
-    color: #222;
+    color: #222;    
     position: fixed;
     z-index: 7;
     top: 0;
-    left: 0;
+    left: 10vw;
     cursor: pointer;
+    transition: all ease-in-out 500ms;
+}
+body[data-nav="false"]> main{
+    transition: all ease-in-out 500ms;
+}
+body:not([data-nav="false"])> main{
     transform: translateX(10vw);
     transition: all ease-in-out 500ms;
 }
 nav{
     position: fixed;
-    height: 100%;
+    height: 100vh;
     width: 10vw;
     left: -30vw;
-    transition: all ease-in-out 500ms;
-    z-index: 5;
+    transition: all ease-in 500ms;
+    z-index: 6;
 
 }
 nav ul{
@@ -214,6 +222,7 @@ h2 {
 }
 .contacts{
     text-align: center;
+    background-color: #fff;
 }
 .contacts h2{
     margin-left: auto;
@@ -229,7 +238,8 @@ footer{
     max-width: 100%;
     text-align: center;
     color: #222;
-    height: 90vh;
+    height: 30vh;
+    background-color: #fff;
     
 }
 .show{
@@ -244,8 +254,8 @@ footer{
     nav{
         width: min-content;
     }
-    body:not([data-nav="false"]) > main > button {
-        transform: translateX(85vw);
+    body:not([data-nav="false"]) > button {
+        transform: translateX(75vw);
         transition: all ease-in-out 500ms;
     }
  
@@ -303,8 +313,8 @@ footer{
     nav{
         width: min-content;
     }
-    body:not([data-nav="false"]) > main > button {
-        transform: translateX(85vw);
+    body:not([data-nav="false"]) > button {
+        transform: translateX(75vw);
         transition: all ease-in-out 500ms;
     }
     .home_screen{

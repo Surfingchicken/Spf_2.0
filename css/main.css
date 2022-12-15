@@ -146,8 +146,6 @@ nav ul li:hover a, nav ul li:hover button{
 h2 {
     margin-left: 5%;
     padding-top: 5%;
-    width: fit-content;
-    height: fit-content;
     text-transform: uppercase;
 }
 .home_screen h2{
@@ -211,7 +209,7 @@ h2 {
    height: 100vh;
    width: 100vw;
    color: #fff;
-   font-size: 15px;
+   font-size: 20px;
 }
 
 .exp h2 {
@@ -219,6 +217,7 @@ h2 {
 }
 .exp .split li h3{
     text-transform:uppercase;
+    text-decoration: underline;
     letter-spacing: 2px;
 }
 
@@ -229,6 +228,9 @@ h2 {
     gap: 2.5rem;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 2rem;
+}
+.exp .split .left{
+    border-right: solid 0.1rem ;
 }
 .exp li{
     line-height: 5rem;
@@ -297,6 +299,12 @@ footer{
     .comp .lang{
         margin-bottom: 0;
     }
+    .comp h2, .exp h2{
+        padding-left: 0;
+        margin:5%;
+        margin-top: 0;
+        text-align: center;
+    }
     .exp{
         margin-top: 0;
         height: min-content;
@@ -306,6 +314,9 @@ footer{
         display: block;
         
         
+    }
+    .exp .left{
+        border-right: none;
     }
     .contacts ul {
         grid-template-columns: repeat(1,1fr);
@@ -339,6 +350,12 @@ footer{
         margin-right: 10%;
         padding-bottom: 0;
     }
+    .comp h2, .exp h2{
+        padding-left: 0;
+        margin-top: 0;
+        margin: 5%;
+        text-align: center;
+    }
     .comp{
         height: min-content;
     }
@@ -353,6 +370,9 @@ footer{
     }
     .exp .split{
         display: block;
+    }
+    .exp .split .left{
+        border-right: none;
     }
     .contacts ul {
         grid-template-columns: repeat(4,1fr);

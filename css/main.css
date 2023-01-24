@@ -14,6 +14,7 @@ body{
   font-weight: 600;
   transition: all .8s ease-in-out;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 h2{
     font-weight: 900;
@@ -50,9 +51,8 @@ img{
     vertical-align: middle;
     object-fit: cover;
 }
-figcaption{
-    display: none;
-
+section{
+    scroll-behavior: smooth;
 }
 /*thème*/
 
@@ -60,12 +60,11 @@ body[data-nav="false"] > button{
     height: 5rem;
     width: 5rem;
     display: block;
-    background-color: rgb(158, 15, 15);
     color: #fff;
     position: fixed;
     z-index: 7;
-    top: 0;
-    left: 5vw;
+    top: 1vh;
+    left: 1vw;
     cursor: pointer;
     transition: all ease-in-out 500ms;
 }
@@ -77,8 +76,8 @@ body:not([data-nav="false"]) > button{
     color: #222;    
     position: fixed;
     z-index: 7;
-    top: 0;
-    left: 10vw;
+    top: 1vh;
+    left: 11vw;
     cursor: pointer;
     transition: all ease-in-out 500ms;
 }
@@ -86,14 +85,17 @@ body[data-nav="false"]> main{
     transition: all ease-in-out 500ms;
 }
 body:not([data-nav="false"])> main{
-    transform: translateX(10vw);
+    transform: translateX(11vw);
     transition: all ease-in-out 500ms;
+}
+.material-symbols-outlined{
+    font-size: 3rem;
 }
 nav{
     position: fixed;
     height: 100vh;
     width: 10vw;
-    left: -30vw;
+    left: -40vw;
     transition: all ease-in 500ms;
     z-index: 6;
 
@@ -144,8 +146,6 @@ nav ul li:hover a, nav ul li:hover button{
     width: 100vw;
 }
 h2 {
-    margin-left: 5%;
-    padding-top: 5%;
     text-transform: uppercase;
 }
 .home_screen h2{
@@ -154,7 +154,6 @@ h2 {
     text-align: center; 
     margin-left: auto;
     margin-right: auto;   
-    text-decoration: underline;
 }
 .home_screen * {
     color: #fff;
@@ -170,15 +169,14 @@ h2 {
     background-color: rgb(223, 223, 206);
     height: 100vh;
     width: 100vw;
+    padding: 5%;
 }
-.comp h2, .exp h2{
+.comp h2, .exp h2, .proj h2{
     font-size: 50px;
-    margin-bottom: 5%;
     padding-left: 20vw;
-
+    margin-bottom: 5%;
 }
 .comp ul{
-    margin: 0 10% 5%;
     display: grid;
     grid-template-columns: repeat(6,1fr);
     gap: 1rem;
@@ -201,7 +199,68 @@ h2 {
     object-fit: contain;
     filter:grayscale(100%);
 }
+.proj{
+    background-color: rgb(77, 75, 75);
+    color: #fff;
+    height: 100vh;
+    width: 100vw;
+    padding: 5%;
+}
+.proj ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 
+}
+.proj ul li figure{
+    background-color: rgb(129, 126, 126);
+    padding: 1rem;
+    border: solid 0.3rem #fff;
+    border-radius: 20px;
+}
+
+
+.proj ul li figure img{
+    height: 30vh;
+    width: 20vw;
+    border-radius: 20px;
+}
+.proj ul li figure figcaption{
+    color: #fff;
+    padding: 1rem;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height:50%;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: scale(0);
+    transition: all 500ms ease-in-out;
+    transform-origin: center center;
+    cursor: pointer;
+    display: none;
+    border-radius: 0 0 20px 20px;
+
+}
+.proj ul li figure figcaption h3 a{
+    color: #fff;
+}
+.proj ul li figure figcaption p{
+    padding: 1rem;
+}
+.proj ul li figure:hover{
+    transform: scale(1.2);
+    background-color: rgb(32, 37, 76);
+}
+.proj ul li figure:hover figcaption{
+   transform: scale(1);
+   display: block;
+}
 .exp{
    background: url(../asset/alex-rodriguez-VR-wUq_JYAk-unsplash.jpg);
    background-size:cover;
@@ -210,6 +269,7 @@ h2 {
    width: 100vw;
    color: #fff;
    font-size: 20px;
+   padding: 5%;
 }
 
 .exp h2 {
@@ -217,23 +277,26 @@ h2 {
 }
 .exp .split li h3{
     text-transform:uppercase;
-    text-decoration: underline;
     letter-spacing: 2px;
 }
 
 .exp .split{
-    margin: 5% 10%  ;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 2.5rem;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 2rem;
+    padding: 1rem;
 }
 .exp .split .left{
     border-right: solid 0.1rem ;
+    padding-left: 1.5rem;
+
 }
 .exp li{
     line-height: 5rem;
+}
+.exp ul li ul li{
+    list-style-type: circle;
 }
 .contacts{
     text-align: center;
@@ -253,7 +316,6 @@ footer{
     max-width: 100%;
     text-align: center;
     color: #222;
-    height: 30vh;
     background-color: #fff;
     
 }
@@ -299,11 +361,30 @@ footer{
     .comp .lang{
         margin-bottom: 0;
     }
-    .comp h2, .exp h2{
+    .comp h2, .exp h2,.proj h2{
         padding-left: 0;
         margin:5%;
         margin-top: 0;
         text-align: center;
+    }
+    .proj {
+        height: fit-content;
+    }
+    .proj ul{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4,1fr);
+    }
+    .proj ul li figure img{
+        width: 80vw;
+        border-radius: 20px 20px 0 0;
+    }
+    .proj ul li figure figcaption{
+        display: block;
+        transform: scale(1);
+        position: relative;
+        width: 80vw;
+        padding: 0;
+        left: 0.8rem;
     }
     .exp{
         margin-top: 0;
@@ -311,12 +392,14 @@ footer{
         padding-bottom: 5%;
     }
     .exp .split{
-        display: block;
-        
-        
+        display: block;  
     }
     .exp .split .left{
         border-right: none;
+        padding-left: 0;
+    }
+    .exp ul li ul li{
+        list-style-type: none;
     }
     .contacts ul {
         grid-template-columns: repeat(1,1fr);
@@ -363,6 +446,27 @@ footer{
         margin-bottom: 0;
         padding-bottom: 5%;
     }
+    .proj {
+        height: fit-content;
+    }
+    .proj ul{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+    .proj ul li figure img{
+        width: 40vw;
+        border-radius: 20px 20px 0 0;
+    }
+    .proj ul li figure figcaption{
+        display: block;
+        transform: scale(1);
+        position: relative;
+        width: 40vw;
+        padding: 0;
+        left: 0.7rem;
+        height: 20vh;
+    }
+    
     .exp{
         margin-top: 0;
         height: min-content;
@@ -373,6 +477,7 @@ footer{
     }
     .exp .split .left{
         border-right: none;
+        padding-left: 0;
     }
     .contacts ul {
         grid-template-columns: repeat(4,1fr);

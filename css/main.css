@@ -226,9 +226,7 @@ h2 {
 }
 
 
-.proj ul li figure img{
 
-}
 .proj ul li figure figcaption{
     color: #fff;
     padding: 1rem;
@@ -243,7 +241,6 @@ h2 {
     transform: scale(0);
     transition: all 500ms ease-in-out;
     transform-origin: center center;
-    cursor: pointer;
     display: none;
 
 }
@@ -256,15 +253,14 @@ h2 {
 .proj ul li figure:hover{
     transform: scale(1);
     background-color: aquamarine;
-    cursor: pointer;
 }
 .proj ul li figure:hover figcaption{
    transform: scale(1);
    display: block;
-   cursor: pointer;
 }
 .proj ul li figure:hover figcaption a{
     color: aquamarine;
+    cursor: pointer;
 }
 .exp{
    background: url(../asset/pexels-pixabay-56832.jpg);

@@ -13,9 +13,8 @@ body{
   overflow-x: hidden;
   font-weight: 600;
   transition: all .8s ease-in-out;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
 }
+
 h2{
     font-weight: 900;
 }
@@ -77,16 +76,16 @@ body:not([data-nav="false"]) > button{
     color: #222;    
     position: fixed;
     z-index: 7;
-    top: 1vh;
-    left: 11vw;
+    top: 10vh;
+    left: 0;
     cursor: pointer;
     transition: all ease-in-out 500ms;
 }
 body[data-nav="false"]> main{
     transition: all ease-in-out 500ms;
 }
-body:not([data-nav="false"])> main{
-    transform: translateX(11vw);
+body[data-nav="true"]> nav{
+    transform: translateY(10vh);
     transition: all ease-in-out 500ms;
 }
 .material-symbols-outlined{
@@ -94,24 +93,23 @@ body:not([data-nav="false"])> main{
 }
 nav{
     position: fixed;
-    height: 100vh;
-    width: 11vw;
-    left: -40vw;
+    height: 10vh;
+    width: 100vw;
+    top: -10vh;
     transition: all ease-in 500ms;
     z-index: 6;
-
 }
 nav ul{
     background-color: #222;
     display: grid;
-    grid-template-rows: repeat(5,1fr);
+    grid-template-columns: repeat(5,1fr);
     height: 100%;
 }
 nav ul li{
     width: 100%;
     text-align: center;
     height: 100%;
-    border-bottom: solid 0.1rem rgba(255, 255, 0, 0.2);
+    border-right: solid 0.1rem rgba(255, 255, 0, 0.2);
 }
 
 nav ul li a{
@@ -212,9 +210,6 @@ h2 {
     gap: 4rem;
 
 }
-.proj ul{
-
-}
 .proj ul li{
     margin:auto;
 }
@@ -224,9 +219,6 @@ h2 {
     background-color: rgb(0, 0, 0);
     padding: 1rem;
 }
-
-
-
 .proj ul li figure figcaption{
     color: #fff;
     padding: 1rem;
@@ -273,9 +265,7 @@ h2 {
    padding: 5%;
 }
 
-.exp h2 {
-   /* color :#222;*/    
-}
+
 .exp .split li h3{
     text-transform:uppercase;
     letter-spacing: 2px;

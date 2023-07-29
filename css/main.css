@@ -278,7 +278,7 @@ h2 {
 }
 
 .exp h2 {
-   /* color :#222;*/
+   /* color :#222;*/    
 }
 .exp .split li h3{
     text-transform:uppercase;
@@ -345,7 +345,6 @@ footer{
         height: 100vh;
     }
     .home_screen p{
-        margin-top: 6rem;
         margin-left: 10%;
         margin-right: 10%;
     }
@@ -377,19 +376,10 @@ footer{
     }
     .proj ul{
         grid-template-columns: repeat(1,1fr);
-        grid-template-rows: repeat(4,1fr);
     }
-    .proj ul li figure img{
-        width: 80vw;
-        border-radius: 20px 20px 0 0;
-    }
-    .proj ul li figure figcaption{
-        display: block;
-        transform: scale(1);
-        position: relative;
-        width: 80vw;
-        padding: 0;
-        left: 0.8rem;
+    .proj ul li figure{
+        width: 40vw;
+        height: 40vw;
     }
     .exp{
         margin-top: 0;
@@ -433,7 +423,6 @@ footer{
         height: 100vh;
     }
     .home_screen p{
-        margin-top: 6rem;
         margin-left: 10%;
         margin-right: 10%;
         padding-bottom: 0;
@@ -458,19 +447,8 @@ footer{
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(2,1fr);
     }
-    .proj ul li figure img{
-        width: 40vw;
-        border-radius: 20px 20px 0 0;
-    }
-    .proj ul li figure figcaption{
-        display: block;
-        transform: scale(1);
-        position: relative;
-        width: 40vw;
-        padding: 0;
-        left: 0.7rem;
-        height: 20vh;
-    }
+    
+ 
     
     .exp{
         margin-top: 0;
